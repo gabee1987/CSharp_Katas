@@ -7,8 +7,13 @@ namespace Katas
     {
         static void Main(string[] args)
         {
+            ReverseStringMethods();
+        }
+
+        private static void ReverseStringMethods()
+        {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("====================== Reverse a string");
+            Console.WriteLine( "====================== Reverse a string" );
             Console.ForegroundColor = ConsoleColor.White;
 
             StringReverse.ReverseString_1( "Hello" );
@@ -24,6 +29,7 @@ namespace Katas
             Console.WriteLine( $"Original string -> {stringToReverse}" );
             Console.WriteLine( "Reversed string -> " + result5 );
             Console.WriteLine( "---------------------------------------\n" );
+            Console.WriteLine( "\n" );
         }
     }
 }
