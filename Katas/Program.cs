@@ -20,16 +20,26 @@ namespace Katas
                 }
 
                 ExecuteChosenExercise( menuId );
-                Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine( "Press ENTER if you would like to try another exercise! \n \n" );
-                ConsoleKeyInfo keyInfo = Console.ReadKey();
-                if ( keyInfo.Key != ConsoleKey.Enter )
-                    IsRunning = false;
+                IsRunning = CheckIfWantToCountinue( IsRunning );
             }
-            
+
         }
 
         #region Menu helper methods
+        private static bool CheckIfWantToCountinue( bool IsRunning )
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine( "Press ENTER if you would like to try another exercise! \n" );
+            ConsoleKeyInfo keyInfo = Console.ReadKey();
+            if ( keyInfo.Key != ConsoleKey.Enter )
+                IsRunning = false;
+
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine();
+            Console.WriteLine();
+            return IsRunning;
+        }
+
         private static string ReadStringInputForTheExercise()
         {
             Console.WriteLine( "Enter a word or sentence" );
