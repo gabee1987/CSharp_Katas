@@ -203,7 +203,6 @@ namespace Katas
             FindLargestNumber.FindLargestNumber_2( stringToCheck );
             FindLargestNumber.FindLargestNumber_3( stringToCheck );
             FindLargestNumber.FindLargestNumber_4( stringToCheck );
-            FindLargestNumber.FindLargestNumber_5( stringToCheck );
         }
     }
 }
