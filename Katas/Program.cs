@@ -22,7 +22,6 @@ namespace Katas
                 ExecuteChosenExercise( menuId );
                 IsRunning = CheckIfWantToCountinue( IsRunning );
             }
-
         }
 
         #region Menu helper methods
@@ -75,7 +74,7 @@ namespace Katas
                     Console.WriteLine( "Menu #3 selected. Check if the string is a palindrome (it can be read the same forwards as backwards. Ex: “eye”) \n" );
                     Console.ForegroundColor = ConsoleColor.White;
                     stringToManipulate = ReadStringInputForTheExercise();
-                    VowelCountMethods( stringToManipulate );
+                    PalindromeCheckMethods( stringToManipulate );
                     break;
                 default:
                     ReverseStringMethods( stringToManipulate );
@@ -130,22 +129,22 @@ namespace Katas
         }
         #endregion
 
-        private static void ReverseStringMethods( string stringToManipulate )
+        private static void ReverseStringMethods( string stringToCheck )
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine( "====================== Reverse a string" );
             Console.ForegroundColor = ConsoleColor.White;
 
-            StringReverse.ReverseString_1( stringToManipulate );
-            StringReverse.ReverseString_2( stringToManipulate );
-            StringReverse.ReverseString_3( stringToManipulate );
-            StringReverse.ReverseString_4( stringToManipulate );
+            StringReverse.ReverseString_1( stringToCheck );
+            StringReverse.ReverseString_2( stringToCheck );
+            StringReverse.ReverseString_3( stringToCheck );
+            StringReverse.ReverseString_4( stringToCheck );
 
             Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine( "#5 Solution (Extension Method)" );
             Console.ForegroundColor = ConsoleColor.White;
-            var result5 = stringToManipulate.ReverseString_5();
-            Console.WriteLine( $"Original string -> {stringToManipulate}" );
+            var result5 = stringToCheck.ReverseString_5();
+            Console.WriteLine( $"Original string -> {stringToCheck}" );
             Console.Write( "Reversed string -> " );
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write( result5 + "\n" );
@@ -154,16 +153,27 @@ namespace Katas
             Console.WriteLine( "\n" );
         }
 
-        private static void VowelCountMethods( string stringToManipulate )
+        private static void VowelCountMethods( string stringToCheck )
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine( "====================== Count the vowels in a string" );
             Console.ForegroundColor = ConsoleColor.White;
 
-            VowelsCount.VowelCounter_1( stringToManipulate );
-            VowelsCount.VowelCounter_2( stringToManipulate );
-            VowelsCount.VowelCounter_3( stringToManipulate );
-            VowelsCount.VowelCounter_4( stringToManipulate );
+            VowelsCount.VowelCounter_1( stringToCheck );
+            VowelsCount.VowelCounter_2( stringToCheck );
+            VowelsCount.VowelCounter_3( stringToCheck );
+            VowelsCount.VowelCounter_4( stringToCheck );
+
+            Console.WriteLine( "\n" );
+        }
+
+        private static void PalindromeCheckMethods( string stringToCheck )
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine( "====================== Check if the string is a palindrome  (it can be read the same forwards as backwards. Ex: “eye”)" );
+            Console.ForegroundColor = ConsoleColor.White;
+
+            PalindromeCheck.PalindromeCheck_1( stringToCheck );
 
             Console.WriteLine( "\n" );
         }

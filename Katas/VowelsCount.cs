@@ -30,12 +30,7 @@ namespace Katas
             }
             #endregion
 
-            Console.WriteLine( $"String -> {stringToCheck}" );
-            Console.Write( "Counted vowels -> " );
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write( result + "\n" );
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine( "---------------------------------------\n" );
+            PrintSolutionResult( stringToCheck, result );
         }
 
         /// <summary>
@@ -58,12 +53,7 @@ namespace Katas
             }
             #endregion
 
-            Console.WriteLine( $"String -> {stringToCheck}" );
-            Console.Write( "Counted vowels -> " );
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write( result + "\n" );
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine( "---------------------------------------\n" );
+            PrintSolutionResult( stringToCheck, result );
         }
 
         /// <summary>
@@ -82,12 +72,7 @@ namespace Katas
             result = stringToCheck.ToLower().Count( c => vowels.Contains( c ) );
             #endregion
 
-            Console.WriteLine( $"String -> {stringToCheck}" );
-            Console.Write( "Counted vowels -> " );
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write( result + "\n" );
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine( "---------------------------------------\n" );
+            PrintSolutionResult( stringToCheck, result );
         }
 
         /// <summary>
@@ -105,6 +90,11 @@ namespace Katas
             result = stringToCheck.ToLower().Count( c => "aeiou".Contains( char.ToLower( c ) ) );
             #endregion
 
+            PrintSolutionResult( stringToCheck, result );
+        }
+
+        private static void PrintSolutionResult( string stringToCheck, int result )
+        {
             Console.WriteLine( $"String -> {stringToCheck}" );
             Console.Write( "Counted vowels -> " );
             Console.ForegroundColor = ConsoleColor.Green;
