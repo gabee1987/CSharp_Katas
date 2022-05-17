@@ -15,24 +15,53 @@ namespace Katas
         /// <param name="stringToCheck"></param>
         public static void PalindromeCheck_1( string stringToCheck )
         {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine( "#1 Solution" );
-            Console.ForegroundColor = ConsoleColor.White;
+            PrintSolutionHeader();
+            bool isPalindrome = false;
+            string result     = string.Empty;
 
             #region Logic
-            bool isPalindrome = false;
-            string result = new string( stringToCheck.ToLower().Reverse().ToArray() );
-            if( !result.Equals( stringToCheck.ToLower() ) )
+            result = new string( stringToCheck.ToLower().Reverse().ToArray() );
+            if ( !result.Equals( stringToCheck.ToLower() ) )
                 isPalindrome = false;
             else
                 isPalindrome = true;
             #endregion
 
+            PrintSolutionResult( stringToCheck, isPalindrome, result );
+        }
+
+
+        /// <summary>
+        /// #1. Solution
+        /// </summary>
+        /// <param name="stringToCheck"></param>
+        public static void PalindromeCheck_2( string stringToCheck )
+        {
+            PrintSolutionHeader();
+            bool isPalindrome = false;
+            string result     = string.Empty;
+
+            #region Logic
+
+            #endregion
+
+            PrintSolutionResult( stringToCheck, isPalindrome, result );
+        }
+
+        private static void PrintSolutionHeader()
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine( "#1 Solution" );
+            Console.ForegroundColor = ConsoleColor.White;
+        }
+
+        private static void PrintSolutionResult( string stringToCheck, bool isPalindrome, string result )
+        {
             Console.WriteLine( $"Original string -> {stringToCheck}" );
             Console.Write( "Reversed string -> " );
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write( result + "\n" );
-            if( !isPalindrome )
+            if ( !isPalindrome )
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine( "No, this string is not a palindrome" );
@@ -42,7 +71,7 @@ namespace Katas
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine( "Yes, this string is a palindrome" );
                 Console.ForegroundColor = ConsoleColor.White;
-            }          
+            }
             Console.WriteLine( "---------------------------------------\n" );
         }
     }

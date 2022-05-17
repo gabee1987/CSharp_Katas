@@ -76,6 +76,13 @@ namespace Katas
                     stringToManipulate = ReadStringInputForTheExercise();
                     PalindromeCheckMethods( stringToManipulate );
                     break;
+                case 4:
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine( "Menu #4 selected. Find the largest number in a string) \n" );
+                    Console.ForegroundColor = ConsoleColor.White;
+                    stringToManipulate = ReadStringInputForTheExercise();
+                    FindLargestNumberMethods( stringToManipulate );
+                    break;
                 default:
                     ReverseStringMethods( stringToManipulate );
                     VowelCountMethods( stringToManipulate );
@@ -102,6 +109,11 @@ namespace Katas
             Console.Write( "#3. " );
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write( "Check if the string is a palindrome (it can be read the same forwards as backwards. Ex: “eye”) \n" );
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write( "#4. " );
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write( "Find the largest number in a string \n" );
         }
 
         private static bool ErrorHandler( string input, out int menuId )
@@ -114,7 +126,7 @@ namespace Katas
                 Console.WriteLine();
                 return false;
             }
-            int menuCount = 3;
+            int menuCount = 4;
             if ( menuId > menuCount )
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -176,6 +188,21 @@ namespace Katas
             PalindromeCheck.PalindromeCheck_1( stringToCheck );
 
             Console.WriteLine( "\n" );
+        }
+
+        private static void FindLargestNumberMethods( string stringToCheck )
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine( "====================== Find the largest number in a string" );
+            Console.ForegroundColor = ConsoleColor.White;
+
+            // abc23de314fgh404ijk5012345678lmn302
+            // av2sdyuassbdu1212asm896722ndksad1945324ias
+
+            FindLargestNumber.FindLargestNumber_1( stringToCheck );
+            FindLargestNumber.FindLargestNumber_2( stringToCheck );
+            FindLargestNumber.FindLargestNumber_3( stringToCheck );
+            FindLargestNumber.FindLargestNumber_4( stringToCheck );
         }
     }
 }
