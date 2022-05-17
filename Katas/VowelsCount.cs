@@ -15,7 +15,7 @@ namespace Katas
         /// <param name="stringToCheck"></param>
         public static void VowelCounter_1( string stringToCheck )
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine( "#1 Solution" );
             Console.ForegroundColor = ConsoleColor.White;
 
@@ -31,7 +31,10 @@ namespace Katas
             #endregion
 
             Console.WriteLine( $"String -> {stringToCheck}" );
-            Console.WriteLine( "Counted vowels -> " + result );
+            Console.Write( "Counted vowels -> " );
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write( result + "\n" );
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine( "---------------------------------------\n" );
         }
 
@@ -41,7 +44,7 @@ namespace Katas
         /// <param name="stringToCheck"></param>
         public static void VowelCounter_2( string stringToCheck )
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine( "#2 Solution" );
             Console.ForegroundColor = ConsoleColor.White;
 
@@ -56,7 +59,34 @@ namespace Katas
             #endregion
 
             Console.WriteLine( $"String -> {stringToCheck}" );
-            Console.WriteLine( "Counted vowels -> " + result );
+            Console.Write( "Counted vowels -> " );
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write( result + "\n" );
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine( "---------------------------------------\n" );
+        }
+
+        /// <summary>
+        /// #3. Solution
+        /// </summary>
+        /// <param name="stringToCheck"></param>
+        public static void VowelCounter_3( string stringToCheck )
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine( "#3 Solution" );
+            Console.ForegroundColor = ConsoleColor.White;
+
+            #region Logic
+            char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+            int result = 0;
+            result = stringToCheck.ToLower().Count( c => vowels.Contains( c ) );
+            #endregion
+
+            Console.WriteLine( $"String -> {stringToCheck}" );
+            Console.Write( "Counted vowels -> " );
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write( result + "\n" );
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine( "---------------------------------------\n" );
         }
     }

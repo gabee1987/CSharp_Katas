@@ -23,13 +23,16 @@ namespace Katas
             StringReverse.ReverseString_3( "Hello" );
             StringReverse.ReverseString_4( "Hello" );
 
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine( "#5 Solution (Extension Method)" );
             Console.ForegroundColor = ConsoleColor.White;
             var stringToReverse = "Hello";
             var result5 = stringToReverse.ReverseString_5();
             Console.WriteLine( $"Original string -> {stringToReverse}" );
-            Console.WriteLine( "Reversed string -> " + result5 );
+            Console.Write( "Reversed string -> " );
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write( result5 + "\n" );
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine( "---------------------------------------\n" );
             Console.WriteLine( "\n" );
         }
@@ -42,6 +45,7 @@ namespace Katas
 
             VowelsCount.VowelCounter_1( "Awesome" );
             VowelsCount.VowelCounter_2( "Awesome" );
+            VowelsCount.VowelCounter_3( "Awesome" );
 
             Console.WriteLine( "\n" );
         }

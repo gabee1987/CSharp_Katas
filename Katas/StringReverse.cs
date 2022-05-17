@@ -15,7 +15,7 @@ namespace Katas
         /// <param name="stringToReverse"></param>
         public static void ReverseString_1( string stringToReverse )
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine( "#1 Solution" );
             Console.ForegroundColor = ConsoleColor.White;
 
@@ -27,7 +27,10 @@ namespace Katas
             #endregion
 
             Console.WriteLine( $"Original string -> {stringToReverse}" );
-            Console.WriteLine( "Reversed string -> " + result );
+            Console.Write( "Reversed string -> " );
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write( result + "\n" );
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine( "---------------------------------------\n" );
         }
 
@@ -37,7 +40,7 @@ namespace Katas
         /// <param name="stringToReverse"></param>
         public static void ReverseString_2( string stringToReverse )
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine( "#2 Solution" );
             Console.ForegroundColor = ConsoleColor.White;
 
@@ -56,7 +59,10 @@ namespace Katas
             #endregion
 
             Console.WriteLine( $"Original string -> {stringToReverse}" );
-            Console.WriteLine( "Reversed string -> " + result );
+            Console.Write( "Reversed string -> " );
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write( result + "\n" );
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine( "---------------------------------------\n" );
         }
 
@@ -66,7 +72,7 @@ namespace Katas
         /// <param name="stringToReverse"></param>
         public static void ReverseString_3( string stringToReverse )
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine( "#3 Solution" );
             Console.ForegroundColor = ConsoleColor.White;
 
@@ -80,7 +86,10 @@ namespace Katas
             
 
             Console.WriteLine( $"Original string -> {stringToReverse}" );
-            Console.WriteLine( "Reversed string -> " + sb );
+            Console.Write( "Reversed string -> " );
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write( sb + "\n" );
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine( "---------------------------------------\n" );
         }
 
@@ -90,7 +99,7 @@ namespace Katas
         /// <param name="stringToReverse"></param>
         public static void ReverseString_4( string stringToReverse )
         {
-            Console.ForegroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine( "#4 Solution" );
             Console.ForegroundColor = ConsoleColor.White;
 
@@ -101,7 +110,10 @@ namespace Katas
 
 
             Console.WriteLine( $"Original string -> {stringToReverse}" );
-            Console.WriteLine( "Reversed string -> " + result );
+            Console.Write( "Reversed string -> " );
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write( result + "\n" );
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine( "---------------------------------------\n" );
         }
 
