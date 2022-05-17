@@ -106,7 +106,7 @@ namespace Katas
         }
 
         /// <summary>
-        /// #5. Solution
+        /// #5. Solution (Extension Method)
         /// </summary>
         /// <param name="stringToReverse"></param>
         public static string ReverseString_5( this string @stringToReverse )
