@@ -89,5 +89,28 @@ namespace Katas
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine( "---------------------------------------\n" );
         }
+
+        /// <summary>
+        /// #4. Solution
+        /// </summary>
+        /// <param name="stringToCheck"></param>
+        public static void VowelCounter_4( string stringToCheck )
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine( "#4 Solution" );
+            Console.ForegroundColor = ConsoleColor.White;
+
+            #region Logic
+            int result = 0;
+            result = stringToCheck.ToLower().Count( c => "aeiou".Contains( char.ToLower( c ) ) );
+            #endregion
+
+            Console.WriteLine( $"String -> {stringToCheck}" );
+            Console.Write( "Counted vowels -> " );
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write( result + "\n" );
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine( "---------------------------------------\n" );
+        }
     }
 }

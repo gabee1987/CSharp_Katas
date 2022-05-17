@@ -47,6 +47,7 @@ namespace Katas
             VowelsCount.VowelCounter_1( stringToManipulate );
             VowelsCount.VowelCounter_2( stringToManipulate );
             VowelsCount.VowelCounter_3( stringToManipulate );
+            VowelsCount.VowelCounter_4( stringToManipulate );
 
             Console.WriteLine( "\n" );
         }
