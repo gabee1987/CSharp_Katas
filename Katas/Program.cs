@@ -8,6 +8,8 @@ namespace Katas
         static void Main(string[] args)
         {
             ReverseStringMethods();
+
+            VowelCountMethods();
         }
 
         private static void ReverseStringMethods()
@@ -29,6 +31,18 @@ namespace Katas
             Console.WriteLine( $"Original string -> {stringToReverse}" );
             Console.WriteLine( "Reversed string -> " + result5 );
             Console.WriteLine( "---------------------------------------\n" );
+            Console.WriteLine( "\n" );
+        }
+
+        private static void VowelCountMethods()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine( "====================== Count the vowels in a string" );
+            Console.ForegroundColor = ConsoleColor.White;
+
+            VowelsCount.VowelCounter_1( "Awesome" );
+            VowelsCount.VowelCounter_2( "Awesome" );
+
             Console.WriteLine( "\n" );
         }
     }
