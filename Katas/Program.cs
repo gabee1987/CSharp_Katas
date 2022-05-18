@@ -233,6 +233,7 @@ namespace Katas
             FindSecondLargestNumber.FindSecondLargestNumber_2( stringToCheck );
             FindSecondLargestNumber.FindSecondLargestNumber_3( stringToCheck );
             FindSecondLargestNumber.FindSecondLargestNumber_4( stringToCheck );
+            FindSecondLargestNumber.FindSecondLargestNumber_5( stringToCheck );
         }
     }
 }

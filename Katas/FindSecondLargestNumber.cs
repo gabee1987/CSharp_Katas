@@ -46,7 +46,7 @@ namespace Katas
             var result = secondLargestNumber;
             #endregion
 
-            PrintSolutionResult( new string( string.Join( "", cleanedNumberArray ) ), result.ToString() );
+            PrintSolutionResult( new string( string.Join( "", numbersToCheck ) ), result.ToString() );
         }
 
         public static void FindSecondLargestNumber_2( string stringToCheck )
@@ -60,11 +60,11 @@ namespace Katas
             if ( numbersToCheck == null )
                 return;
 
-            numbersToCheck.Sort();
             var distinctNumbers = numbersToCheck.Distinct().ToList();
-            long result         = 0;
-            var counter         = 0;
-            long tempNumber     = 0;
+            distinctNumbers.Sort();
+            long result     = 0;
+            var counter     = 0;
+            long tempNumber = 0;
 
             for ( int i = distinctNumbers.Count() - 1; i > 0; i-- )
             {
@@ -126,6 +126,25 @@ namespace Katas
             cleanedNumberArray.Reverse();
 
             var result = cleanedNumberArray[1];
+            #endregion
+
+            PrintSolutionResult( new string( string.Join( "", numbersToCheck ) ), result.ToString() );
+        }
+
+        public static void FindSecondLargestNumber_5( string stringToCheck )
+        {
+
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine( "#5 Solution" );
+            Console.ForegroundColor = ConsoleColor.White;
+
+            #region Logic
+            var numbersToCheck = ParseStringToCollection( stringToCheck ).ToList();
+
+            var modifiedList   = numbersToCheck.Distinct().ToList();
+            modifiedList.Remove( numbersToCheck.Max() );
+
+            var result = modifiedList.Max();
             #endregion
 
             PrintSolutionResult( new string( string.Join( "", numbersToCheck ) ), result.ToString() );
