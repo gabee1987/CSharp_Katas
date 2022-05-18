@@ -83,6 +83,13 @@ namespace Katas
                     stringToManipulate = ReadStringInputForTheExercise();
                     FindLargestNumberMethods( stringToManipulate );
                     break;
+                case 5:
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine( "Menu #5 selected. Find the second largest number in a string \n" );
+                    Console.ForegroundColor = ConsoleColor.White;
+                    stringToManipulate = ReadStringInputForTheExercise();
+                    FindSecondLargestNumberMethods( stringToManipulate );
+                    break;
                 default:
                     ReverseStringMethods( stringToManipulate );
                     VowelCountMethods( stringToManipulate );
@@ -114,6 +121,11 @@ namespace Katas
             Console.Write( "#4. " );
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write( "Find the largest number in a string \n" );
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write( "#5. " );
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write( "Find the second largest number in a string \n" );
         }
 
         private static bool ErrorHandler( string input, out int menuId )
@@ -126,7 +138,7 @@ namespace Katas
                 Console.WriteLine();
                 return false;
             }
-            int menuCount = 4;
+            int menuCount = 5;
             if ( menuId > menuCount )
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -203,6 +215,24 @@ namespace Katas
             FindLargestNumber.FindLargestNumber_2( stringToCheck );
             FindLargestNumber.FindLargestNumber_3( stringToCheck );
             FindLargestNumber.FindLargestNumber_4( stringToCheck );
+        }
+
+        private static void FindSecondLargestNumberMethods( string stringToCheck )
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine( "====================== Find the second largest number in a string" );
+            Console.ForegroundColor = ConsoleColor.White;
+
+            // abc23de314fgh404ijk5012345678lmn302
+            // av2sdyuassbdu1212asm896722ndksad1945324ias
+            // 396
+            // 369
+            // 284224596
+
+            FindSecondLargestNumber.FindSecondLargestNumber_1( stringToCheck );
+            FindSecondLargestNumber.FindSecondLargestNumber_2( stringToCheck );
+            FindSecondLargestNumber.FindSecondLargestNumber_3( stringToCheck );
+            FindSecondLargestNumber.FindSecondLargestNumber_4( stringToCheck );
         }
     }
 }
