@@ -90,6 +90,13 @@ namespace Katas
                     stringToManipulate = ReadStringInputForTheExercise();
                     FindSecondLargestNumberMethods( stringToManipulate );
                     break;
+                case 6:
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine( "Menu #6 selected. Count a total number of alphabets, digits and special characters in a string \n" );
+                    Console.ForegroundColor = ConsoleColor.White;
+                    stringToManipulate = ReadStringInputForTheExercise();
+                    CountVariousCharactersMethods( stringToManipulate );
+                    break;
                 default:
                     ReverseStringMethods( stringToManipulate );
                     VowelCountMethods( stringToManipulate );
@@ -126,6 +133,11 @@ namespace Katas
             Console.Write( "#5. " );
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write( "Find the second largest number in a string \n" );
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write( "#6. " );
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write( "Count a total number of alphabets, digits and special characters in a string \n" );
         }
 
         private static bool ErrorHandler( string input, out int menuId )
@@ -138,7 +150,7 @@ namespace Katas
                 Console.WriteLine();
                 return false;
             }
-            int menuCount = 5;
+            int menuCount = 6;
             if ( menuId > menuCount )
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -234,6 +246,20 @@ namespace Katas
             FindSecondLargestNumber.FindSecondLargestNumber_3( stringToCheck );
             FindSecondLargestNumber.FindSecondLargestNumber_4( stringToCheck );
             FindSecondLargestNumber.FindSecondLargestNumber_5( stringToCheck );
+        }
+
+        private static void CountVariousCharactersMethods( string stringToCheck )
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine( "====================== Count a total number of alphabets, digits and special characters in a string" );
+            Console.ForegroundColor = ConsoleColor.White;
+
+            // av2¤ßsdyuas sbdu1(=212as#m896722/ndks$+ad1945˝¨324ias
+            // IUNBkm878]]34[vwevWDß×23Iegfwe#^°^˛˛`qwfdWfFGFE
+            // abcd12345+@{
+
+
+            CountVariousCharacters.CountVariousCharacters_1( stringToCheck );
         }
     }
 }
