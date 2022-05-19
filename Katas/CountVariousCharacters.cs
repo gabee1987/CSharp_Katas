@@ -46,6 +46,38 @@ namespace Katas
             PrintSolutionResult( stringToCheck, result );
         }
 
+        public static void CountVariousCharacters_2( string stringToCheck )
+        {
+            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.WriteLine( "#2 Solution" );
+            Console.ForegroundColor = ConsoleColor.White;
+
+            #region Logic
+            Dictionary<string, char[]> result = new Dictionary<string, char[]>();
+            List<char> foundAlphabets = new List<char>();
+            List<char> foundDigits = new List<char>();
+            List<char> foundSpecialcharacters = new List<char>();
+
+            for ( int i = 0; i < stringToCheck.Length; i++ )
+            {
+                if ( System.Text.RegularExpressions.Regex.IsMatch( stringToCheck[i].ToString(), "[a-z]", System.Text.RegularExpressions.RegexOptions.IgnoreCase ) )
+                    foundAlphabets.Add( stringToCheck[i] );
+
+                else if ( Char.IsDigit( stringToCheck[i] ) )
+                    foundDigits.Add( stringToCheck[i] );
+
+                else if ( stringToCheck[i] != ' ' )
+                    foundSpecialcharacters.Add( stringToCheck[i] );
+            }
+
+            result.Add( _alphabetsKey, foundAlphabets.ToArray() );
+            result.Add( _digitsKey, foundDigits.ToArray() );
+            result.Add( _specialcharactersKey, foundSpecialcharacters.ToArray() );
+            #endregion
+
+            PrintSolutionResult( stringToCheck, result );
+        }
+
         private static void PrintSolutionResult( string stringToCheck, Dictionary<string, char[]> result )
         {
             Console.WriteLine( $"Original string -> {stringToCheck}" );

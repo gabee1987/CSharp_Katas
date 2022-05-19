@@ -260,6 +260,7 @@ namespace Katas
 
 
             CountVariousCharacters.CountVariousCharacters_1( stringToCheck );
+            CountVariousCharacters.CountVariousCharacters_2( stringToCheck );
         }
     }
 }
