@@ -97,6 +97,13 @@ namespace Katas
                     stringToManipulate = ReadStringInputForTheExercise();
                     CountVariousCharactersMethods( stringToManipulate );
                     break;
+                case 7:
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine( "Menu #6 selected. Find the maximum occurring character in a string \n" );
+                    Console.ForegroundColor = ConsoleColor.White;
+                    stringToManipulate = ReadStringInputForTheExercise();
+                    FindMaxOccurrenceOfCharMethods( stringToManipulate );
+                    break;
                 default:
                     ReverseStringMethods( stringToManipulate );
                     VowelCountMethods( stringToManipulate );
@@ -138,6 +145,11 @@ namespace Katas
             Console.Write( "#6. " );
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write( "Count a total number of alphabets, digits and special characters in a string \n" );
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write( "#7. " );
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write( "Find the maximum occurring character in a string \n" );
         }
 
         private static bool ErrorHandler( string input, out int menuId )
@@ -150,7 +162,7 @@ namespace Katas
                 Console.WriteLine();
                 return false;
             }
-            int menuCount = 6;
+            int menuCount = 7;
             if ( menuId > menuCount )
             {
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -209,6 +221,11 @@ namespace Katas
             Console.WriteLine( "====================== Check if the string is a palindrome  (it can be read the same forwards as backwards. Ex: “eye”)" );
             Console.ForegroundColor = ConsoleColor.White;
 
+            // racecar
+            // Anna
+            // mom
+            // stats
+
             PalindromeCheck.PalindromeCheck_1( stringToCheck );
 
             Console.WriteLine( "\n" );
@@ -261,6 +278,22 @@ namespace Katas
 
             CountVariousCharacters.CountVariousCharacters_1( stringToCheck );
             CountVariousCharacters.CountVariousCharacters_2( stringToCheck );
+        }
+
+        private static void FindMaxOccurrenceOfCharMethods( string stringToCheck )
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine( "====================== Find the maximum occurring character in a string" );
+            Console.ForegroundColor = ConsoleColor.White;
+
+            // av2¤ßsdyuas sbdu1(=212as#m896722/ndks$+ad1945˝¨324ias
+            // IUNBkm878]]34[vwevWDß×23Iegfwe#^°^˛˛`qwfdWfFGFE
+            // abcd12345+@{
+            // aabch67fannembkhaapogratgrt876dfavreegbaa
+            // aabb123a
+
+
+            FindMaxOccurrenceOfChar.FindMaxOccurrenceOfChar_1( stringToCheck );
         }
     }
 }
